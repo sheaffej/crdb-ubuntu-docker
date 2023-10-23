@@ -14,3 +14,7 @@ ADD https://binaries.cockroachdb.com/cockroach-${CRDB_VERSION}.linux-amd64.tgz /
 RUN tar xzvf cockroach-*.linux-amd64.tgz \
     && mv cockroach-*.linux-amd64/* . \
     && rm -Rf cockroach-*.linux-amd64*
+
+EXPOSE 26257/tcp
+EXPOSE 8080/tcp
+   
